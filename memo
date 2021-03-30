@@ -1,0 +1,11 @@
+npx create-react-app react_app
+でreactアプリを作成
+
+cd でアプリフォルダへ移動
+
+npm start
+で実行
+
+eslint
+コードを保管ツール
+
