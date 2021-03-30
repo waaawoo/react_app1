@@ -9,3 +9,7 @@ npm start
 eslint
 コードを保管ツール
 
+scssの導入
+yarn add node-sass
+npm install -s node sass
+yarn add node-sass
