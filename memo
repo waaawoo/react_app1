@@ -13,3 +13,11 @@ scssの導入
 yarn add node-sass
 npm install -s node sass
 yarn add node-sass
+
+component
+・functionl 関数定義
+・class クラス定義
+
+classを使用する際は
+{ component }を記載し、
+クラス作成時に継承する
