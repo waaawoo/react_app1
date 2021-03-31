@@ -21,3 +21,13 @@ component
 classを使用する際は
 { component }を記載し、
 クラス作成時に継承する
+
+props
+親のコンポーネントからこのコンポーネント
+へ情報を伝達することができる
+再利用可能なcomponentを作ることが保守性向上につながる
+親:D(name = bob)
+子:this.props.nameで親のname属性を取得できる
+
+reactは出力するTOPの要素は単一でないといけない
+複数あるとエラーになる
