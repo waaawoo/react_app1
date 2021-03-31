@@ -31,3 +31,8 @@ props
 
 reactは出力するTOPの要素は単一でないといけない
 複数あるとエラーになる
+
+stateを使ってステータスを持たせる
+this.state = { name: 'bob'}
+this.setState({name: 'jon'})で変更できる
+
