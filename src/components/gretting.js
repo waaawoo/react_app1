@@ -8,4 +8,4 @@ import  React, { PropTypes } from 'react';
    );
  }
 // typeの指定が必要か？
-export default Greeting;
+ export default Greeting;
