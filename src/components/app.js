@@ -42,12 +42,19 @@ class App_class extends Component{
 
   // --------- 使用する関数を作成する -----------
 
-  handleMouseOver(){
-    this.setState({ name: 'Bob' });
-  }
+  // handleMouseOver(){
+  //   this.setState({ name: 'Bob' });
+  // }
 
-  handleMouseOut(){
-    this.setState({ name: 'Mike' });
+  // handleMouseOut(){
+  //   this.setState({ name: 'Mike' });
+  // }
+
+  // 引数にe.taget.valueが入ってくる
+  handleNameChange(name){
+    // onNameChangeイベントのvalueを取得する
+    // this.setState({ name: name})// ショートハンド⬇︎
+    this.setState({ name })
   }
 //  ------------------------------------------
 
@@ -56,10 +63,25 @@ class App_class extends Component{
     return(
       <div
         // mouseoverはjsの関数、そこに無名関数を渡す
-        onMouseOver={() => this.handleMouseOver()}
-        onMouseOut={() => this.handleMouseOut()}
-
+        // onMouseOver={() => this.handleMouseOver()}
+        // onMouseOut={() => this.handleMouseOut()}
       >
+        {/* 入力値のvalueをthis.state.nameで変数へいれると固定される */}
+        <input
+          type="text"
+          value={this.state.name}
+          // イベント設置 ブラウザでonchangeされる時、イベントが渡される(e.taget.value)を引数に入れる
+          onChange={(e) =>  this.handleNameChange(e.target.value)}
+        />
+
+        {/*
+          関数の再利用例
+          ボタンを押すとOnclickイベントが発火し、関数を実行、引数にbobが入っているのでBobが渡される
+        */}
+        <button
+          onClick={() => this.handleNameChange("Bob")}
+        >Bob</button>
+
         {/* this.stateで設定したnameを渡す */}
         <Greeting name={this.state.name} />
       </div>
